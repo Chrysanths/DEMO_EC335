@@ -1,0 +1,284 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+body {
+    background-color: #F2F3F5;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #D1BFF3 5%, #FAD3FF 35%, #FFDFEC 65%, #BEF7FF 95%);;
+    align-items: center;
+    padding: 5px 4%;
+    z-index: 10;
+}
+
+.header-virtual {
+    height: 80px;
+}
+
+.header .title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #8C69CA;
+    padding-left: 10px;
+}
+
+.header .right {
+    display: flex;
+    align-items: center;
+}
+
+.header .acc {
+    margin-right: 40px;
+    color: #8C69CA;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.body {
+    padding-top: 30px;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 5px #fff;
+}
+.header .btn {
+    font-weight: 500px;
+    font-size: 20px;
+    line-height: 40px;
+    text-decoration: none;
+    color: white;
+    background: #8C69CA;
+    padding: 0px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 300ms;
+    border: none;
+}
+
+
+
+.shadow-radius {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profile {
+    height: 100%;
+    display: block;
+    text-align: center;
+    padding: 5% 5px 5% 5px;
+}
+
+.post {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+}
+
+.body .container_profile {
+    width: 20%;
+    height: 500px;
+}
+
+.body .container_post {
+    width: 68%;
+    height: 600px;
+    margin-left: 30px;
+}
+.ctn_avt_content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;    
+    padding: 10px;
+}
+
+#post_content {
+    width: 100%;
+    height: 80%;
+    border: none;
+    background-color: #F2F3F5;
+    border-radius: 10px;
+    padding-left: 20px ;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+}
+.container_btn {
+    width: 85%;
+    height: 100%;
+}
+.btn-post {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    background: #8C69CA;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none; 
+    margin-top: 5px;
+}
+
+.item {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.avt_post {
+    width: 60px;
+    height: 60px;
+    clip-path: circle(50%);
+    margin-right: 20px;
+}
+.ctn_avt_username {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.detail {
+    line-height: 28px;
+    padding: 5px 50px 10px 110px;
+}
+
+.username {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.profile * {
+    margin: 10px;
+
+}
+
+.avt_profile {
+    width: 100px;
+    height: 100px;
+    clip-path: circle(50%);
+}
+
+.username_profile  {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.date {
+    font-size: 13px;
+    color: gray;
+}
+
+/* login: index.html */
+
+.frame {
+    border: 1.5px solid rgba(140, 105, 202, 0.37);
+    box-shadow: 0px 1px 10px rgba(177, 154, 214, 0.72);
+    border-radius: 40px;
+    width: 25%;
+    height: 250px;
+    display: grid;
+    justify-content: center;
+}
+
+.form_login {
+    border: 1.5px solid rgba(140, 105, 202, 0.37);
+    box-shadow: 0px 1px 10px rgba(177, 154, 214, 0.72);
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-200px, -225px);
+    border-radius: 20px;
+    background: #FEFEFE;
+    transition: 500ms;
+    padding: 50px;
+}
+
+.form_signup {
+    height: 500px;
+}
+
+.btn-long {
+    width: 100%;
+    height: 36px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #A084CA 2.5%, #F5A8FF 39.07%, #FFBAD5 66.96%, #77DAE8 95.6%);
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 200ms;
+    font-family: 'Roboto';
+    padding: 5px;
+    align-items: center;
+}
+
+.container_form {
+    width: 100%;
+    font-size: 18px;
+}
+
+.container_form .input_form{
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid gray;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.login_title {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn_signup {
+    text-decoration: none;
+    color: #77DAE8;
+}
+
+.container_form div {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* signup.php */
+.content {
+    width: 30%;
+    height: 100px;
+    margin-top: 100px;
+    padding-left: 100px;
+}

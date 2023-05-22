@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mạng xã hội</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        function XMLFunction(){
+            var xml = '' +
+                '<?xml version="1.0" encoding="UTF-8"?>' +
+                '<root>' +
+                '<username>' + $('#username').val() + '</username>' +
+                '<password>' + $('#password').val() + '</password>' +
+                '<repeatpassword>' + $('#repeat_password').val() + '</repeatpassword>' +
+                '</root>';
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                //if(xmlhttp.readyState == 4){
+                    //console.log(xmlhttp.readyState);
+                    //console.log(xmlhttp.responseText);
+                    document.getElementById('message').innerHTML = xmlhttp.responseText;
+                //}
+            }
+            xmlhttp.open("POST","processXML.php",true);
+            xmlhttp.send(xml);
+            //alert(xml);
+        };
+
+        function JSONFunction(){
+            var json = '{' +
+                    '"username":' + '"' + $('#username').val() + '",' +
+                    '"password":' + '"' + $('#password').val() + '",' +
+                    '"repeatpassword":' + '"' + $('#repeat_password').val() + '"' +
+                    "}";
+            var jsonhttp = new XMLHttpRequest();
+            jsonhttp.onreadystatechange = function(){
+                document.getElementById('message').innerHTML = jsonhttp.responseText;
+            }
+            jsonhttp.open("POST","processJSON.php",true);
+            jsonhttp.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+            jsonhttp.send(json);
+        };
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <p class="title">MẠNG XÃ HỘI GENZ</p>
+    </div>
+
+    <div class="header-virtual"></div>
+
+    <div class="content" id="message">
+            dad
+    </div>
+
+    <div class="form_login form_signup ">
+        <p class="login_title"> Đăng ký tài khoản </p>
+
+        <div class="container_form">
+                <br>
+                <label for="username username">Tài khoản</label> <br>
+                <input class="input_form" type="text" id="username" placeholder="username" required> <br>
+                <br>
+                
+                <label for="password">Mật khẩu</label> <br>
+                <input class="input_form password" type="password" id="password" placeholder="password" required><br>
+                <br>
+                <label for="password">Nhập lại mật khẩu</label> <br>
+                <input class="input_form repeat_password" type="password" id="repeat_password" placeholder="password" required><br>
+                <br>
+                <button id="registerView" onclick="XMLFunction()" class="btn-long">Đăng ký</button>
+                <div>
+                    <a class="btn_signup" href="index.html">Đăng nhập</a><br>
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>
